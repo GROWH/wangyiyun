@@ -1,0 +1,93 @@
+.play-container {
+    position: relative;
+    background-color: #7F7F7F;
+    overflow: hidden;
+    .play-controls {
+        position: absolute;
+        z-index: 1;
+        top:-2px;
+        left: 50%;
+        width: 144px;
+        height: 180px;
+        background: url('../img/needle-ip6.png') no-repeat;
+        background-size: contain;
+        //旋转中心 默认为center
+        transform-origin: 10px top;
+        // 旋转角度
+        // transform: rotate(-15deg);
+        // 过渡动画
+        transition: transform 1s;
+    }
+
+    .play-wrap {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        top: 70px;
+        background: url('../img/disc-ip6.png') no-repeat;
+        background-size: 300px 300px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+
+            // 引用动画
+            // animation:circle 12s linear infinite;
+            
+
+        }
+        .sport{
+            animation:circle 12s linear infinite;
+        }
+
+        .btn {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-image: url('../img/list_sprite.png');
+        }
+
+        .btn-play {
+            background-position: 0 0;
+        }
+
+        .btn-pause {
+            background-position: 0 -50px;
+        }
+    }
+
+    .content {
+        text-align: center;
+        color: #fff;
+        margin-top: 80px;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+}
+
+@keyframes circle {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+
+    }
+}

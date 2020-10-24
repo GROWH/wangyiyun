@@ -1,0 +1,22 @@
+.recommend-container {
+    .ant-carousel {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.section {
+    padding: 10px;
+
+    h3 {
+        border-left: 3px solid #FF4B00;
+        padding-left: 10px;
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+// 解决轮播图索引按钮层级问题
+.slick-dots{
+    z-index: 1 !important;
+}
